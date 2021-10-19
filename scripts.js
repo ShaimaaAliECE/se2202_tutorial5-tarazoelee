@@ -14,7 +14,7 @@ createGameBoard()
 function createGameBoard()
 {
     // Programatically add a button with square brackets enclosing an empty space to each cell in the gameboard
-   for(leti=0;i<cells.length;i++){
+   for(leti=0; i<cells.length ;i++){
        cells[i].innerHTML=btn;
    }
 }
@@ -27,23 +27,22 @@ for (let i=0; i<btns.length; i++)
 }
 
 // This function will be used to respond to a click event on any of the board buttons.
-function takeCell(event)
-{
+function takeCell(event){
     /*
         When the button is clicked, the space inside its square brackets is replaced by the value in the nextPlayer before switching it
     */
    let button= event.target;
    if(nextPlayer === 'X'){
-       let nextP =document.querySelector('#next-lbl');
+    let nextP =document.querySelector('#next-lbl');
        button.innerText = '[X]';
        button.disabled=true;
-       nextPlayer ='0';
+       nextPlayer ='O';
        nextP.innerHTML =nextPlayer;
        disable++;
    }
-   else if(nextPlayer ==='0'){
+   else if(nextPlayer ==='O'){
        let nextP = document.querySelector('#next-lbl');
-       button.innerText='[0]';
+       button.innerText='[O]';
        button.disabled=true;
        nextPlayer='X';
        nextP.innerHTML=nextPlayer;
@@ -55,8 +54,8 @@ function takeCell(event)
     // Check if the game is over
     if (isGameOver())
     {
-        let read = document.querySelector('#game-over-lbl');
-        read.innerHTML="Game Over";
+        let lable = document.querySelector('#game-over-lbl');
+        lable.innerHTML="Game Over";
         // let the lable with the id 'game-over-lbl' display the words 'Game Over' inside <h1> element
     }
 
