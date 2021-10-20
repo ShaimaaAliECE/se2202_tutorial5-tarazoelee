@@ -4,7 +4,7 @@ let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the gam
 nextPlayer = prompt("Choose X or O");
 if(nextPlayer != 'X' && nextPlayer != 'O'){
     nextPlayer = 'X';
-}
+} 
 
 // use the value stored in the nextPlayer variable to indicate who the next player is
 let nextPlayerlbl = document.getElementById('next-lbl');
