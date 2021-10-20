@@ -1,6 +1,6 @@
 let nextPlayer = 'X'; // takes a value of either 'X' or 'O' according to the game turns
-let cells = document.querySelectorAll('td');
-let btn = `<button id='btn'>[ ]</button>`;
+let cell = document.querySelectorAll('td');
+let button = `<button id='button'>[ ]</button>`;
 let disable = 0;
 
 
@@ -16,7 +16,7 @@ function createGameBoard()
 
     for(let i = 0; i<cells.length; i++){
 
-         cells[i].innerHTML = btn;
+         cell[i].innerHTML = button;
 
    }
     
@@ -25,10 +25,10 @@ function createGameBoard()
 }
 
 // Programatically add 'takeCell' as an event listener to all the buttons on the board
-let btns = document.querySelectorAll('button');
-for (let i=0; i<btns.length; i++)
+let buttons = document.querySelectorAll('button');
+for (let i=0; i<buttons.length; i++)
 {
-    btns[i].addEventListener('click', (event) => { takeCell(event)});
+    buttons[i].addEventListener('click', (event) => { takeCell(event)});
 }
 
 // This function will be used to respond to a click event on any of the board buttons.
